@@ -207,6 +207,12 @@ main {
   transition: 0.5s;
 }
 
+a .liquid::after {
+  border-radius: 40%;
+  background: rgba(20, 20, 20, 0.5);
+  animation: animate 10s linear infinite;
+}
+
 .main-button .liquid::after,
 .main-button .liquid::before {
   content: '';
@@ -216,12 +222,6 @@ main {
   top: 0;
   left: 50%;
   transform: translate(-50%, -75%);
-}
-
-a .liquid::after {
-  border-radius: 40%;
-  background: rgba(20, 20, 20, 0.5);
-  animation: animate 10s linear infinite;
 }
 
 .main-button .liquid::before {
