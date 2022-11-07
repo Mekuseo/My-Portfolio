@@ -8,14 +8,6 @@ body {
   font-family: poppins, sans-serif;
 }
 
-nav,
-main,
-header,
-footer,
-section {
-  width: 375px;
-}
-
 /* navigator start */
 
 .nav {
@@ -24,8 +16,14 @@ section {
   padding: 44px 0 0 0;
 }
 
-.nav-header h1 {
+.nav-header img {
   margin: 4px 0 4px 12px;
+  width: 80px;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: none;
 }
 
 .nav-img {
@@ -43,6 +41,8 @@ section {
 header {
   margin-bottom: 22px;
   background-image: url(images/header-shapes\ mobile@2x.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .header {
@@ -88,7 +88,7 @@ header {
 /* header end */
 
 /* main start */
-main {
+.desktop-card-grid {
   background-color: #d0cece;
   display: grid;
   grid-template-columns: 327px;
@@ -100,7 +100,7 @@ main {
   background-color: white;
   padding: 16px;
   border-radius: 16px;
-  margin: 114px 0 88px 0;
+  margin: 60px 0 50px 0;
   cursor: pointer;
   transition: all 0.2s ease-in;
 }
@@ -254,7 +254,6 @@ a:hover .liquid {
   display: flex;
   flex-direction: column;
   row-gap: 12px;
-  width: 327px;
   margin: 114px 24px 0 24px;
 }
 
@@ -440,6 +439,10 @@ svg {
   font-weight: 100;
 }
 
+.btn-color {
+  color: rgb(6, 6, 75) !important
+}
+
 /* footer button end */
 
 input[type=text],
@@ -468,3 +471,113 @@ textarea {
 }
 
 /* footer End */
+
+/* Desktop Version */
+
+/* Nav Desktop Start */
+
+@media only screen and (min-width: 1100px) {
+
+  .nav-header {
+    margin-left: 90px;
+  }
+
+  .nav-img {
+    display: none;
+  }
+
+  .nav-menu {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin-right: 90px;
+    transition: 0.2s ease;
+  }
+
+  .nav-menu li {
+    margin: 0 20px;
+    color: #344563;
+  }
+
+  .nav-menu li:hover {
+    cursor: pointer;
+    color: rgb(6, 6, 75);
+    border-bottom: 2px solid rgb(6, 6, 75);
+  }
+
+  header {
+    border-radius: 20px;
+  }
+
+  .header {
+    background-image: none;
+  }
+
+  .desktop-header {
+    background-image: url(images/Header\ bg@2x.png);
+    margin: 0 140px;
+    background-size: contain;
+  }
+
+  .desktop-card-grid {
+    background-color: #d0cece;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    justify-content: center;
+    margin: 0;
+  }
+
+  .main-image {
+    align-self: center;
+    padding: 0 20px;
+  }
+
+  .card {
+    grid-column-start: 3;
+    grid-column-end: 9;
+    display: flex;
+    margin: 40px 0;
+  }
+ 
+  .card-text {
+    margin: 0 40px;
+  }
+
+  .about {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+  }
+
+  .about-us {
+    margin: 60px 24px;
+    grid-column-start: 2;
+    grid-column-end: 5;
+  }
+
+  .languages {
+    grid-column-start: 5;
+    grid-column-end: 10;
+    margin: 60px 40px;
+  }
+
+  .language-flex2 {
+    display: inline-flex;
+    flex-direction: row;
+  }
+
+  .language-name {
+    display: flex;
+    flex-direction: column;
+    margin: 7px;
+  }
+
+  hr {
+    width: 100%;
+  }
+
+  .footer-container {
+    margin: 250px;
+  }
+}
+
+/* Nav Desktop End */
