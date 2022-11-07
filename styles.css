@@ -440,7 +440,7 @@ svg {
 }
 
 .btn-color {
-  color: rgb(6, 6, 75) !important
+  color: rgb(6, 6, 75) !important;
 }
 
 /* footer button end */
@@ -478,7 +478,7 @@ textarea {
 
 @media only screen and (min-width: 1100px) {
 
-  .nav-header {
+.nav-header {
     margin-left: 90px;
   }
 
