@@ -477,8 +477,7 @@ textarea {
 /* Nav Desktop Start */
 
 @media only screen and (min-width: 1100px) {
-
-.nav-header {
+  .nav-header {
     margin-left: 90px;
   }
 
@@ -538,7 +537,7 @@ textarea {
     display: flex;
     margin: 40px 0;
   }
- 
+
   .card-text {
     margin: 0 40px;
   }
