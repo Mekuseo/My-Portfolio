@@ -4,6 +4,9 @@
 
 My Portfolio Version 2
 
+# My Portfolio Link on Github Page:
+
+https://mekuseo.github.io/My-Portfolio/
 
 ## Built With
 
