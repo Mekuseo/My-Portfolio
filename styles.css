@@ -41,6 +41,10 @@ body {
   background-color: #6070ffa8;
 }
 
+#hamburger-toggle-btn {
+  z-index: 2;
+}
+
 .show-hamburger a {
   font-size: 25px;
   text-decoration: none;
