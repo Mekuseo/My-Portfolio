@@ -20,4 +20,8 @@ function toggleMenu() {
 
 toggleBtn.addEventListener('click', toggleMenu);
 
-menuOptions.forEach((item) => item.addEventListener('click', toggleMenu));
+menuOptions.forEach((item) =>
+  item.addEventListener('click', () => {
+    if (!hamburgerImg.classList.contains('hamburger')) toggleMenu();
+  })
+);
