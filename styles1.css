@@ -396,17 +396,20 @@ main {
   }
 
   .desktop-card-grid {
-    padding: 200px;
+    padding: 150px;
+    margin-bottom: 60px;
   }
 
   .card {
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+    margin: 40px 0;
   }
+
+  .card {
+    display: flex;
+    flex-direction: row;
+  }
+
   
 }
