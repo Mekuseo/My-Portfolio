@@ -520,6 +520,7 @@ textarea {
     list-style: none;
     margin-right: 90px;
     transition: 0.2s ease;
+    z-index: 10;
   }
 
   .nav-menu a {
@@ -613,3 +614,18 @@ textarea {
 }
 
 /* Nav Desktop End */
+
+/* MOBILE MENU BLURRED SCREEN */
+
+body.blur {
+  backdrop-filter: blur(5px);
+}
+
+body.blur > *:not(.menu):not(#hamburger) {
+  filter: blur(5px);
+  z-index: 0;
+}
+
+.fixed-position {
+  position: fixed;
+}

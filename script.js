@@ -2,10 +2,12 @@ const toggleBtn = document.querySelector('#hamburger-toggle-btn');
 const hamburgerImg = document.querySelector('#hamburger-img');
 const navMenu = document.querySelector('#hamburger-menu');
 const menuOptions = navMenu.querySelectorAll('a');
+const body = document.querySelector('body');
 
 function toggleMenu() {
   navMenu.classList.toggle('show-hamburger');
-  console.log('click');
+  body.classList.toggle("fixed");
+  body.classList.toggle("blur");
 
   if (hamburgerImg.classList.contains('hamburger')) {
     hamburgerImg.src = 'images/Icon - Cancel.png';
@@ -19,3 +21,9 @@ function toggleMenu() {
 toggleBtn.addEventListener('click', toggleMenu);
 
 menuOptions.forEach((item) => item.addEventListener('click', toggleMenu));
+
+if (hamburgerImg.is(":visible")) {
+  body.addClass("fixed-position");
+} else {
+    body.removeClass("fixed-position");
+}
