@@ -3,6 +3,19 @@ const hamburgerImg = document.querySelector('#hamburger-img');
 const navMenu = document.querySelector('#hamburger-menu');
 const menuOptions = navMenu.querySelectorAll('a');
 const body = document.querySelector('body');
+const form = document.querySelector('.contact-form');
+const emailInput = document.querySelector('#email');
+const errorMsg = document.querySelector('#error-message');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  if (emailInput.value !== emailInput.value.toLowerCase()) {
+    errorMsg.textContent = 'Please enter your email in all lowercase!';
+  } else {
+    errorMsg.textContent = '';
+    form.submit();
+  }
+});
 
 function toggleMenu() {
   navMenu.classList.toggle('show-hamburger');
