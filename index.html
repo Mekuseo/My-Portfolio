@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+
     <title>My Portfolio</title>
   </head>
   <body>
@@ -19,13 +20,18 @@
         <div class="nav-header">
           <img src="./images/portfolio logo.png" alt="portfolio-logo" />
         </div>
-        <div class="nav-img">
-          <img src="./images/Union.png" alt="hamburger-img" />
+        <div class="nav-img" id="hamburger-toggle-btn">
+          <img
+            src="./images/Union.png"
+            alt="hamburger-img"
+            id="hamburger-img"
+            class="hamburger"
+          />
         </div>
-        <ul class="nav-menu">
-          <li><a href="#"> Portfolio </a> </li>
-          <li><a href="#"> About </a> </li>
-          <li><a href="#"> Contact </a> </li>
+        <ul class="nav-menu" id="hamburger-menu">
+          <li><a href="#portfolio"> Portfolio </a></li>
+          <li><a href="#about"> About </a></li>
+          <li><a href="#contact"> Contact </a></li>
         </ul>
       </div>
     </nav>
@@ -66,7 +72,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="portfolio">
       <div class="desktop-card-grid">
         <div class="card">
           <div class="main-image">
@@ -264,7 +270,7 @@
       </div>
     </main>
 
-    <section>
+    <section id="about">
       <div class="about">
         <div class="about-us">
           <h2>About <br />Myself</h2>
@@ -354,7 +360,7 @@
       </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="contact">
       <div class="footer-container">
         <h2 class="footer-header">Contact me</h2>
         <p>
@@ -421,5 +427,6 @@
         </form>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
