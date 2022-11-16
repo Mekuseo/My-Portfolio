@@ -15,35 +15,45 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
+
 body {
   line-height: 1;
 }
+
 ol, ul {
   list-style: none;
 }
+
 blockquote, q {
   quotes: none;
 }
+
 blockquote:before, blockquote:after, q:before, q:after {
   content: '';
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 /* END CSS RESET */
 
 body {
   background-color: #e5e5e5;
   font-family: Poppins, sans-serif;
 }
+
 /* NAV */
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -52,6 +62,22 @@ body {
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px 30px;
+}
+
+.display-menu {
+  background-color: #6070ffb8;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 90px;
+  z-index: 5;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 .nav-header {
@@ -70,6 +96,57 @@ body {
   top: 35px;
   cursor: pointer;
   transition: all 0.5s ease-out;
+  z-index: 20;
+}
+
+/* Adding transform to the X */
+.menu-btn.close {
+  transform: rotate(180deg);
+}
+
+/* Styling the three lines to make it an X */
+
+.menu-btn.close .btn-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-btn.close .btn-line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.close .btn-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+.nav-menu:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.nav-menu:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.nav-menu:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+#hamburger-menu.show {
+  display: flex;
+  position:absolute;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  margin-bottom: 30px;
+}
+
+#hamburger-menu a {
+  color: white;
+  font-size: 2em;
+  text-decoration: none
+}
+
+#hamburger-menu li {
+  margin: 20px;
 }
 
 .menu-btn .btn-line {
@@ -385,10 +462,13 @@ main {
   }
 
   .nav {
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
+    z-index: 1;
+    width: 100%;
   }
 
   .header {
