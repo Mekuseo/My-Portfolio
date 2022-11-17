@@ -4,6 +4,20 @@ const navMenu = document.querySelector('#hamburger-menu');
 const menuOptions = navMenu.querySelectorAll('a');
 const body = document.querySelector('body');
 const portfolioGrid = document.querySelector('#portfolio-grid');
+const popup = document.querySelector('#popup');
+const portfolioButtons = document.querySelectorAll('.btn');
+const workBtn = document.querySelector('#work-btn');
+
+portfolioButtons.forEach((button) => {
+  portfolioButtons.addEventListener('click', () => {
+    popup.classList.add('open-work-card');
+  })
+});
+
+workBtn.addEventListener('click', () => {
+  body.classList.remove('open-work-card');
+});
+
 
 function showProjects(projectObject) {
   const cardDiv = document.createElement('div');
