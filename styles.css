@@ -27,6 +27,14 @@ body {
   display: none;
 }
 
+.nav-img {
+  margin: 4px 24px 4px 0;
+}
+
+.nav-img img {
+  margin-right: 12px;
+}
+
 .show-hamburger {
   margin: 0;
   padding-top: 100px;
@@ -53,14 +61,6 @@ body {
 
 .show-hamburger li {
   padding: 5px 0 5px 0;
-}
-
-.nav-img {
-  margin: 4px 24px 4px 0;
-}
-
-.nav-img img {
-  margin: 8px;
 }
 
 /* navigator end */
@@ -641,14 +641,14 @@ textarea {
 
 /* MOBILE MENU BLURRED SCREEN */
 
-body.blur {
-  backdrop-filter: blur(5px);
+.blur {
+  backdrop-filter: blur(8px);
 }
 
-body.blur > *:not(.menu):not(#hamburger) {
+/* body.blur > *:not(.menu):not(#hamburger) {
   filter: blur(5px);
   z-index: 0;
-}
+} */
 
 .fixed-position {
   position: fixed;
