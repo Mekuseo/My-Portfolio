@@ -8,7 +8,8 @@ const popup = document.querySelector('#popup');
 const workBtn = document.querySelector('.work-btn');
 const saveInfo = document.querySelector('.save-info');
 
-const dataList = JSON.parse(localStorage.myFormList);
+const dataList = JSON.parse(localStorage.getItem('myFormList'))
+;
 const lastForm = dataList[dataList.length - 1];
 
 document.querySelector('#fname').value = lastForm.name;
