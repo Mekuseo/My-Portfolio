@@ -5,19 +5,11 @@ const menuOptions = navMenu.querySelectorAll('a');
 const body = document.querySelector('body');
 const portfolioGrid = document.querySelector('#portfolio-grid');
 const popup = document.querySelector('#popup');
-const portfolioButtons = document.querySelectorAll('.btn');
-const workBtn = document.querySelector('#work-btn');
-
-portfolioButtons.forEach((button) => {
-  portfolioButtons.addEventListener('click', () => {
-    popup.classList.add('open-work-card');
-  })
-});
+const workBtn = document.querySelector('.work-btn');
 
 workBtn.addEventListener('click', () => {
-  body.classList.remove('open-work-card');
+  popup.classList.remove('open-work-card');
 });
-
 
 function showProjects(projectObject) {
   const cardDiv = document.createElement('div');
@@ -152,8 +144,16 @@ toggleBtn.addEventListener('click', toggleMenu);
 
 menuOptions.forEach((item) => item.addEventListener('click', toggleMenu));
 
-if (hamburgerImg.is(':visible')) {
-  body.addClass('fixed-position');
-} else {
-  body.removeClass('fixed-position');
-}
+const portfolioButtons = document.querySelectorAll('.btn');
+portfolioButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    popup.classList.add('open-work-card');
+    console.log('pop up clicked!');
+  });
+});
+
+// if (hamburgerImg.is(':visible')) {
+//   body.addClass('fixed-position');
+// } else {
+//   body.removeClass('fixed-position');
+// }
