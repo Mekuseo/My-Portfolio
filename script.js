@@ -8,13 +8,14 @@ const popup = document.querySelector('#popup');
 const workBtn = document.querySelector('.work-btn');
 const saveInfo = document.querySelector('.save-info');
 
-const dataList = JSON.parse(localStorage.getItem('myFormList'))
-;
-const lastForm = dataList[dataList.length - 1];
+if (localStorage.getItem('myFormList') !== null) {
+  const dataList = JSON.parse(localStorage.getItem('myFormList'));
+  const lastForm = dataList[dataList.length - 1];
 
-document.querySelector('#fname').value = lastForm.name;
-document.querySelector('#email').value = lastForm.email;
-document.querySelector('#subject').value = lastForm.message;
+  document.querySelector('#fname').value = lastForm.name;
+  document.querySelector('#email').value = lastForm.email;
+  document.querySelector('#subject').value = lastForm.message;
+}
 
 workBtn.addEventListener('click', () => {
   popup.classList.remove('open-work-card');
