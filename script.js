@@ -7,6 +7,7 @@ const portfolioGrid = document.querySelector('#portfolio-grid');
 const popup = document.querySelector('#popup');
 const workBtn = document.querySelector('.work-btn');
 const saveInfo = document.querySelector('.save-info');
+const contactForm = document.querySelector('.contact-form');
 
 if (localStorage.getItem('myFormList') !== null) {
   const dataList = JSON.parse(localStorage.getItem('myFormList'));
@@ -163,8 +164,7 @@ portfolioButtons.forEach((button) => {
 });
 
 let formList = [];
-const addInfo = (ev) => {
-  ev.preventDefault();
+function addInfo() {
   let form = {
     id: Date.now(),
     name: document.getElementById('fname').value,
@@ -172,12 +172,11 @@ const addInfo = (ev) => {
     message: document.getElementById('subject').value,
   };
   formList.push(form);
-  document.forms[0].reset();
 
   localStorage.setItem('myFormList', JSON.stringify(formList));
-};
+}
 
-saveInfo.addEventListener('click', addInfo);
+contactForm.addEventListener('change', addInfo);
 
 // if (hamburgerImg.is(':visible')) {
 //   body.addClass('fixed-position');
