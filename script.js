@@ -6,9 +6,10 @@ const body = document.querySelector('body');
 const portfolioGrid = document.querySelector('#portfolio-grid');
 const popup = document.querySelector('#popup');
 const workBtn = document.querySelector('.work-btn');
+const closePopupBtn = document.querySelector('#close-popup');
 
-workBtn.addEventListener('click', () => {
-  popup.classList.remove('open-work-card');
+closePopupBtn.addEventListener('click', () => {
+  popup.classList.add('hide-popup');
 });
 
 function showProjects(projectObject) {
@@ -147,8 +148,7 @@ menuOptions.forEach((item) => item.addEventListener('click', toggleMenu));
 const portfolioButtons = document.querySelectorAll('.btn');
 portfolioButtons.forEach((button) => {
   button.addEventListener('click', () => {
-    popup.classList.add('open-work-card');
-    console.log('pop up clicked!');
+    popup.classList.remove('hide-popup');
   });
 });
 

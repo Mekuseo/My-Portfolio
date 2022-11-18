@@ -666,14 +666,33 @@ body.blur > *:not(.menu):not(#hamburger) {
   margin-bottom: 114px;
 }
 
-.work-card {
+#popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  backdrop-filter: blur(5px);
+  background-color: #6070ff9b;
+}
+
+.hide-popup {
   display: none;
+}
+
+.work-card {
+  display: flex;
   flex-direction: column;
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 48px;
+  transform: translate(-50%, -50%); */
+  width: 80%;
+  height: 90%;
+  margin: 5% auto 0 auto;
+  padding: 12px;
+  overflow-y: scroll;
   gap: 12px;
   background-color: #fff;
   border: 1px solid #dfe1e6;
@@ -681,11 +700,27 @@ body.blur > *:not(.menu):not(#hamburger) {
   transition: 0.4s, top 0.4s;
 }
 
-.open-work-card {
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#close-popup {
+  background: none;
+  border: none;
+  font-size: 2rem;
+}
+
+#close-popup:hover {
+  color: red;
+  transform: scale(1.5);
+}
+
+/* .open-work-card {
   display: flex;
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
-}
+} */
 
 .work-snapshot {
   width: 100%;
