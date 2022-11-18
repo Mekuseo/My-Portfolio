@@ -7,6 +7,17 @@ const portfolioGrid = document.querySelector('#portfolio-grid');
 const popup = document.querySelector('#popup');
 const workBtn = document.querySelector('.work-btn');
 const closePopupBtn = document.querySelector('#close-popup');
+const saveInfo = document.querySelector('.save-info');
+const contactForm = document.querySelector('.contact-form');
+
+if (localStorage.getItem('myFormList') !== null) {
+  const dataList = JSON.parse(localStorage.getItem('myFormList'));
+  const lastForm = dataList[dataList.length - 1];
+
+  document.querySelector('#fname').value = lastForm.name;
+  document.querySelector('#email').value = lastForm.email;
+  document.querySelector('#subject').value = lastForm.message;
+}
 
 closePopupBtn.addEventListener('click', () => {
   popup.classList.add('hide-popup');
@@ -151,6 +162,21 @@ portfolioButtons.forEach((button) => {
     popup.classList.remove('hide-popup');
   });
 });
+
+let formList = [];
+function addInfo() {
+  let form = {
+    id: Date.now(),
+    name: document.getElementById('fname').value,
+    email: document.getElementById('email').value,
+    message: document.getElementById('subject').value,
+  };
+  formList.push(form);
+
+  localStorage.setItem('myFormList', JSON.stringify(formList));
+}
+
+contactForm.addEventListener('change', addInfo);
 
 // if (hamburgerImg.is(':visible')) {
 //   body.addClass('fixed-position');

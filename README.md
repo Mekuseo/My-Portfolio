@@ -12,6 +12,7 @@ https://mekuseo.github.io/My-Portfolio/
 
 - CSS
 - HTML
+- JavaScript
 - GITHUB
 
 ## Authors
