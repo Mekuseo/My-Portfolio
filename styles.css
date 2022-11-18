@@ -684,10 +684,12 @@ body.blur > *:not(.menu):not(#hamburger) {
 .work-card {
   display: flex;
   flex-direction: column;
+
   /* position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); */
+  
   width: 80%;
   height: 90%;
   margin: 5% auto 0 auto;
