@@ -150,7 +150,7 @@ function toggleMenu() {
   }
 }
 
-toggleBtn.addEventListener('click', toggleMenu);
+toggleBtn.addEventListener('check', toggleMenu);
 
 menuOptions.forEach((item) => item.addEventListener('click', toggleMenu));
 
