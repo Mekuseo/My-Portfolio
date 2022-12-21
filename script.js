@@ -43,6 +43,7 @@ function showProjects(projectObject) {
   cardDiv.classList.add("card");
   imgDiv.classList.add("main-image");
   image.src = projectObject.image;
+  image.style.width = "300px";
   textDiv.classList.add("card-text");
   title.innerText = projectObject.name;
   headerList.classList.add("sub-header-list");
@@ -97,7 +98,7 @@ function showProjects(projectObject) {
 
 const projectList = [
   {
-    name: "Project Title",
+    name: "Todo List",
     description:
       "Todo List is a list of tasks or activities that need to be completed. It is often used to organize and prioritize tasks, and to track progress on projects or goals. To-do lists can be useful for managing time and staying focused on what needs to be done.",
     image: "./images/todolist screenshot.png",
