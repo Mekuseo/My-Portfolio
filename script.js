@@ -1,61 +1,61 @@
-const toggleBtn = document.querySelector('#hamburger-toggle-btn');
-const hamburgerImg = document.querySelector('#hamburger-img');
-const navMenu = document.querySelector('#hamburger-menu');
-const menuOptions = navMenu.querySelectorAll('a');
-const body = document.querySelector('body');
-const portfolioGrid = document.querySelector('#portfolio-grid');
-const popup = document.querySelector('#popup');
-const workBtn = document.querySelector('.work-btn');
-const closePopupBtn = document.querySelector('#close-popup');
-const saveInfo = document.querySelector('.save-info');
-const contactForm = document.querySelector('.contact-form');
+const toggleBtn = document.querySelector("#hamburger-toggle-btn");
+const hamburgerImg = document.querySelector("#hamburger-img");
+const navMenu = document.querySelector("#hamburger-menu");
+const menuOptions = navMenu.querySelectorAll("a");
+const body = document.querySelector("body");
+const portfolioGrid = document.querySelector("#portfolio-grid");
+const popup = document.querySelector("#popup");
+const workBtn = document.querySelector(".work-btn");
+const closePopupBtn = document.querySelector("#close-popup");
+const saveInfo = document.querySelector(".save-info");
+const contactForm = document.querySelector(".contact-form");
 
-if (localStorage.getItem('myFormList') !== null) {
-  const dataList = JSON.parse(localStorage.getItem('myFormList'));
+if (localStorage.getItem("myFormList") !== null) {
+  const dataList = JSON.parse(localStorage.getItem("myFormList"));
   const lastForm = dataList[dataList.length - 1];
 
-  document.querySelector('#fname').value = lastForm.name;
-  document.querySelector('#email').value = lastForm.email;
-  document.querySelector('#subject').value = lastForm.message;
+  document.querySelector("#fname").value = lastForm.name;
+  document.querySelector("#email").value = lastForm.email;
+  document.querySelector("#subject").value = lastForm.message;
 }
 
-closePopupBtn.addEventListener('click', () => {
-  popup.classList.add('hide-popup');
+closePopupBtn.addEventListener("click", () => {
+  popup.classList.add("hide-popup");
 });
 
 function showProjects(projectObject) {
-  const cardDiv = document.createElement('div');
-  const imgDiv = document.createElement('div');
-  const image = document.createElement('img');
-  const textDiv = document.createElement('div');
-  const headerDiv = document.createElement('div');
-  const title = document.createElement('h2');
-  const headerList = document.createElement('div');
-  const nameDiv = document.createElement('div');
-  const counterImg = document.createElement('img');
-  const devDiv = document.createElement('div');
-  const yearDiv = document.createElement('div');
-  const description = document.createElement('p');
-  const techDiv = document.createElement('div');
-  const techList = document.createElement('ul');
-  const button = document.createElement('button');
+  const cardDiv = document.createElement("div");
+  const imgDiv = document.createElement("div");
+  const image = document.createElement("img");
+  const textDiv = document.createElement("div");
+  const headerDiv = document.createElement("div");
+  const title = document.createElement("h2");
+  const headerList = document.createElement("div");
+  const nameDiv = document.createElement("div");
+  const counterImg = document.createElement("img");
+  const devDiv = document.createElement("div");
+  const yearDiv = document.createElement("div");
+  const description = document.createElement("p");
+  const techDiv = document.createElement("div");
+  const techList = document.createElement("ul");
+  const button = document.createElement("button");
 
-  cardDiv.classList.add('card');
-  imgDiv.classList.add('main-image');
+  cardDiv.classList.add("card");
+  imgDiv.classList.add("main-image");
   image.src = projectObject.image;
-  textDiv.classList.add('card-text');
+  textDiv.classList.add("card-text");
   title.innerText = projectObject.name;
-  headerList.classList.add('sub-header-list');
-  nameDiv.classList.add('main-sub1');
-  nameDiv.innerText = 'Canopy';
-  counterImg.src = './images/Counter.png';
-  devDiv.classList.add('main-sub');
-  devDiv.innerText = 'Back End Dev';
-  yearDiv.classList.add('main-sub');
-  yearDiv.innerText = '2015';
+  headerList.classList.add("sub-header-list");
+  nameDiv.classList.add("main-sub1");
+  nameDiv.innerText = "Canopy";
+  counterImg.src = "./images/Counter.png";
+  devDiv.classList.add("main-sub");
+  devDiv.innerText = "Back End Dev";
+  yearDiv.classList.add("main-sub");
+  yearDiv.innerText = "2015";
 
   description.innerText = projectObject.description;
-  button.classList.add('btn');
+  button.classList.add("btn");
 
   // Adding header elements
   const headerListElements = [nameDiv, counterImg, devDiv, counterImg, yearDiv];
@@ -67,7 +67,7 @@ function showProjects(projectObject) {
 
   // Adding technologies from array
   for (let item of projectObject.technologies) {
-    const listElem = document.createElement('li');
+    const listElem = document.createElement("li");
     listElem.innerText = item;
     techList.appendChild(listElem);
   }
@@ -97,40 +97,40 @@ function showProjects(projectObject) {
 
 const projectList = [
   {
-    name: 'Project Title',
+    name: "Project Title",
     description:
-      'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    image: './images/Snapshoot Portfolio.png',
-    technologies: ['html', 'css', 'js'],
-    live_link: '#',
-    source_link: '#',
+      "Todo List is a list of tasks or activities that need to be completed. It is often used to organize and prioritize tasks, and to track progress on projects or goals. To-do lists can be useful for managing time and staying focused on what needs to be done.",
+    image: "./images/todolist screenshot.png",
+    technologies: ["html", "css", "js"],
+    live_link: "https://mekuseo.github.io/Todo-List-Project/dist/",
+    source_link: "https://github.com/Mekuseo/Todo-List-Project",
   },
   {
-    name: 'Project Title',
+    name: "Project Title",
     description:
-      'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    image: './images/Snapshoot Portfolio.png',
-    technologies: ['html', 'css', 'js'],
-    live_link: '#',
-    source_link: '#',
+      "A daily selection of privately personalized reads; no accounts or sign-ups required.",
+    image: "./images/Snapshoot Portfolio.png",
+    technologies: ["html", "css", "js"],
+    live_link: "#",
+    source_link: "#",
   },
   {
-    name: 'Project Title',
+    name: "Project Title",
     description:
-      'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    image: './images/Snapshoot Portfolio.png',
-    technologies: ['html', 'css', 'js'],
-    live_link: '#',
-    source_link: '#',
+      "A daily selection of privately personalized reads; no accounts or sign-ups required.",
+    image: "./images/Snapshoot Portfolio.png",
+    technologies: ["html", "css", "js"],
+    live_link: "#",
+    source_link: "#",
   },
   {
-    name: 'Project Title',
+    name: "Project Title",
     description:
-      'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    image: './images/Snapshoot Portfolio.png',
-    technologies: ['html', 'css', 'js'],
-    live_link: '#',
-    source_link: '#',
+      "A daily selection of privately personalized reads; no accounts or sign-ups required.",
+    image: "./images/Snapshoot Portfolio.png",
+    technologies: ["html", "css", "js"],
+    live_link: "#",
+    source_link: "#",
   },
 ];
 
@@ -139,27 +139,27 @@ for (let project of projectList) {
 }
 
 function toggleMenu() {
-  navMenu.classList.toggle('show-hamburger');
-  body.classList.toggle('fixed');
-  body.classList.toggle('blur');
+  navMenu.classList.toggle("show-hamburger");
+  body.classList.toggle("fixed");
+  body.classList.toggle("blur");
 
-  if (hamburgerImg.classList.contains('hamburger')) {
-    hamburgerImg.src = 'images/Icon - Cancel.png';
-    hamburgerImg.classList.remove('hamburger');
+  if (hamburgerImg.classList.contains("hamburger")) {
+    hamburgerImg.src = "images/Icon - Cancel.png";
+    hamburgerImg.classList.remove("hamburger");
   } else {
-    hamburgerImg.src = 'images/Union.png';
-    hamburgerImg.classList.add('hamburger');
+    hamburgerImg.src = "images/Union.png";
+    hamburgerImg.classList.add("hamburger");
   }
 }
 
-toggleBtn.addEventListener('click', toggleMenu);
+toggleBtn.addEventListener("click", toggleMenu);
 
-menuOptions.forEach((item) => item.addEventListener('click', toggleMenu));
+menuOptions.forEach((item) => item.addEventListener("click", toggleMenu));
 
-const portfolioButtons = document.querySelectorAll('.btn');
+const portfolioButtons = document.querySelectorAll(".btn");
 portfolioButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    popup.classList.remove('hide-popup');
+  button.addEventListener("click", () => {
+    popup.classList.remove("hide-popup");
   });
 });
 
@@ -167,16 +167,16 @@ let formList = [];
 function addInfo() {
   let form = {
     id: Date.now(),
-    name: document.getElementById('fname').value,
-    email: document.getElementById('email').value,
-    message: document.getElementById('subject').value,
+    name: document.getElementById("fname").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("subject").value,
   };
   formList.push(form);
 
-  localStorage.setItem('myFormList', JSON.stringify(formList));
+  localStorage.setItem("myFormList", JSON.stringify(formList));
 }
 
-contactForm.addEventListener('change', addInfo);
+contactForm.addEventListener("change", addInfo);
 
 // if (hamburgerImg.is(':visible')) {
 //   body.addClass('fixed-position');
